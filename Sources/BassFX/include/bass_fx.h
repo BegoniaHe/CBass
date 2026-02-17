@@ -22,15 +22,15 @@ typedef int BOOL32;
 #define BOOL BOOL32 // override objc's BOOL
 #endif
 
-#ifdef __cplusplus
-	extern "C" {
-#endif
-
 #ifndef BASS_FXDEF
 	#define BASS_FXDEF(f) WINAPI f
 #endif
     
 #include "bass.h"
+
+#ifdef __cplusplus
+	extern "C" {
+#endif
 
 // BASS_CHANNELINFO types
 #define BASS_CTYPE_STREAM_TEMPO		0x1f200
@@ -74,7 +74,7 @@ DWORD BASS_FXDEF(BASS_FX_GetVersion)();
 enum {
 	BASS_FX_BFX_ROTATE = 0x10000,			// A channels volume ping-pong	/ multi channel
 	BASS_FX_BFX_ECHO,						// Echo							/ 2 channels max	(deprecated)
-	BASS_FX_BFX_FLANGER,					// Flanger						/ multi channel		(deprecated)
+	BASS_FX_BFX_FLANGER,					// Flanger					/ multi channel		(deprecated)
 	BASS_FX_BFX_VOLUME,						// Volume						/ multi channel
 	BASS_FX_BFX_PEAKEQ,						// Peaking Equalizer			/ multi channel
 	BASS_FX_BFX_REVERB,						// Reverb						/ 2 channels max	(deprecated)
@@ -234,7 +234,7 @@ typedef struct {
 typedef struct {
 	float fThreshold;						// compressor threshold						[0<=...<=1]
 	float fAttacktime;						// attack time ms							[0<.<=1000]
-	float fReleasetime;						// release time ms							[0<.<=5000]
+	float fReleasetime;						// release time ms						[0<.<=5000]
 	int   lChannel;							// BASS_BFX_CHANxxx flag/s
 } BASS_BFX_COMPRESSOR;
 
