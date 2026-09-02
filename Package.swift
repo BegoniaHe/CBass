@@ -343,7 +343,7 @@ let package = Package(
                 .target(name: "bassape", condition: .when(platforms: [.iOS])),
                 .target(name: "libbassape", condition: .when(platforms: [.macOS]))
             ],
-            path: "Sources/bassape"
+            path: "Sources/BassApe"
         ),
         /// The **iOS** binary target
         .binaryTarget(
@@ -495,7 +495,7 @@ let package = Package(
                 .target(name: "bassenc_opus", condition: .when(platforms: [.iOS])),
                 .target(name: "libbassenc_opus", condition: .when(platforms: [.macOS]))
             ],
-            path: "Sources/bassenc_opus"
+            path: "Sources/BassENC_Opus"
         ),
         /// The **iOS** binary target
         .binaryTarget(
@@ -518,7 +518,7 @@ let package = Package(
                 .target(name: "bassloud", condition: .when(platforms: [.iOS])),
                 .target(name: "libbassloud", condition: .when(platforms: [.macOS]))
             ],
-            path: "Sources/bassloud"
+            path: "Sources/BassLoud"
         ),
         /// The **iOS** binary target
         .binaryTarget(
